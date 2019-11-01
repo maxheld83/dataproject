@@ -3,6 +3,8 @@ name: Render and Deploy RMarkdown Website
 jobs:
   build:
     runs_on: ubuntu-18.04
+    container:
+      image: rocker/verse:latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@master
@@ -19,4 +21,3 @@ jobs:
         env:
           BUILD_DIR: $DEPLOY_PATH
           GH_PAT: ${{ secrets.GH_PAT }}
-    container: rocker/verse:latest
