@@ -1,0 +1,6 @@
+name: "dataproject"
+navbar:
+  title: "My Data Project"
+  left:
+    - text: "Home"
+      href: index.html
